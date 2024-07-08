@@ -16,12 +16,6 @@ def run():
     with NATSClient(url=SERVER) as client:
         client.connect()
 
-        # Subscribe
-        def callback(msg):
-            print(f"Received a message with subject {msg.subject}: {msg}")
-
-        client.subscribe(subject="test-subject", callback=callback)
-
         logger.info(f"Trying to publish data to [{TOPIC}]")
 
         data = encode_payload(
