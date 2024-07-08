@@ -1,0 +1,7 @@
+nats-server/nats-server
+nats-server/nats-data
+
+.idea/
+.venv/
+__pycache__/
+.DS_Store
